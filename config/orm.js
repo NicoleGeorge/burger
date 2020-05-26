@@ -1,29 +1,29 @@
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+const connection = require("../config/connection.js");
 
 
 // Object for all our SQL statement functions.
-var orm = {
+const orm = {
   
   all: function(table) {
-    var queryString = "SELECT * FROM ??";
+    const queryString = "SELECT * FROM ??";
     return connection.query(queryString, [table]);
   },
   
   create: function(table, cols, vals) {
-    var queryString = "INSERT INTO ?? (??) VALUES (?)";
+    const queryString = "INSERT INTO ?? (??) VALUES (?)";
     return connection.query(queryString, [table, cols, vals]);
   },
   
 
   update: function(table, objColVals, condition) {
-    var queryString = "UPDATE ?? SET ? WHERE ?";
+    const queryString = "UPDATE ?? SET ? WHERE ?";
     return connection.query(queryString, [table, objColVals, condition])
   },
   
 
   delete: function(table, condition) {
-    var queryString = "DELETE FROM ?? WHERE ?";
+    const queryString = "DELETE FROM ?? WHERE ?";
     return connection.query(queryString, [table, condition]);
   }
 };
