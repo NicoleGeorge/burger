@@ -5,7 +5,7 @@ $(function() {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
-      var newBurger = {
+      const newBurger = {
         name: $("#burger").val().trim(),
       };
   
@@ -23,7 +23,7 @@ $(function() {
     });
   
     $(".delete-burger").on("click", function(event) {
-      var id = $(this).data("id");
+      const id = $(this).data("id");
   
       // Send the DELETE request.
       $.ajax("/api/burgers/" + id, {
