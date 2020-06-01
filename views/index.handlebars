@@ -23,44 +23,22 @@
       {{/each}}
     </div>
   </div>
-
 </div>
-
-
-
-
-
-<ul>
-  
-      {{> cats/cat-block sleep=true}}
-
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-
-<h2>What burger would you like?</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+<div class="col-md-6 text-center" class="order">
+  <div class="row">
+    <h2>What burger would you like?</h2>
+    <form class="create-form">
+      <div class="form-group">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="burger" name="name">
+      </div>
+      <div class="form-group">
+        <label for="eat">Devour?</label><br>
+        <input type="radio" name="eat" value="1" checked> YUMMY!<br>
+        <input type="radio" name="eat" value="0"> Held up at gun point
+      </div>
+        <button type="submit">Order Burger</button>
+    </form>
   </div>
-
-  <div class="form-group">
-    <label for="eat">Devour?</label><br>
-    <input type="radio" name="eat" value="1" checked> YUMMY!<br>
-    <input type="radio" name="eat" value="0"> Held up at gun point
-  </div>
-
-  <button type="submit">Order Burger</button>
-</form>
 </div>
+ </div>
