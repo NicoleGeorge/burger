@@ -3,18 +3,17 @@ const orm = require("../config/orm.js");
 
 const burger = {
   all: function() {
-    return orm.all("burgers");
+    return orm.all("burgers", function(res) {
+      cb(res);
+    });
   },
 
-  create: function(cols, vals) {
+  create: function(name, cb) {
     return orm.create("burgers", cols, vals);
   },
   update: function(objColVals, condition) {
     return orm.update("burgers", objColVals, condition);
   },
-  delete: function(condition) {
-    return orm.delete("burgers", condition)
-  }
 };
 
 // Export the database functions for the controller (burgers_controller.js).

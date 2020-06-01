@@ -6,26 +6,20 @@ const connection = require("../config/connection.js");
 const orm = {
   
   all: function(table) {
-    const queryString = "SELECT * FROM ??";
+    const queryString = "SELECT * FROM " + tableInput + ";";
     return connection.query(queryString, [table]);
   },
   
-  create: function(table, cols, vals) {
+  create: function(table, cols, vals, cb) {
     const queryString = "INSERT INTO ?? (??) VALUES (?)";
     return connection.query(queryString, [table, cols, vals]);
   },
   
-
   update: function(table, objColVals, condition) {
     const queryString = "UPDATE ?? SET ? WHERE ?";
     return connection.query(queryString, [table, objColVals, condition])
   },
   
-
-  delete: function(table, condition) {
-    const queryString = "DELETE FROM ?? WHERE ?";
-    return connection.query(queryString, [table, condition]);
-  }
 };
 
 // Export the orm object for the model (burger.js).
