@@ -1,24 +1,18 @@
 const express = require("express");
-
 const router = express.Router();
-
-// import the following:
-
-// Express
-// burger.js
-
 const burger = require("../models/burger.js");
 
 // eate the router for the app
 router.get("/", function(req, res) {
+  res.redirect("/burgers");
   burger.all()
-  .then(burgers => {
+  .then(burgerData => {
     console.log(burgers);
-    res.render("index", { burgers });
+    res.render("index", { burger_data: burgerData });
   });
 });
 
-router.post("/api/burgers", function(req, res) {
+router.post("/burgers", function(req, res) {
   burger.create([
     "name",
   ], [
@@ -27,6 +21,7 @@ router.post("/api/burgers", function(req, res) {
   .then(result => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
+    res.redirect("/");
   });
 });
 
@@ -41,7 +36,7 @@ router.post("/api/burgers", function(req, res) {
     }
   });
 
-router.delete("/api/burgers/:id", function(req, res) {
+router.delete("/burgers/:id", function(req, res) {
   var condition = { id: req.params.id };
 
   burger.delete(condition)
