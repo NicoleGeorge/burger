@@ -20,4 +20,6 @@
 - alternatiuvely, they can creat/order their own bespoke burger.
 - once ordered, they can choose whether they 'devour' it or delete it because it's just gross.
 - once devoured or deleted, the burger will be taken off the menu list
-  
+
+# Work in progress
+- debugging the app so it can run successfully. 
