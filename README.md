@@ -5,7 +5,7 @@
 
 # Deployed App
 - via Heroku:
-[]()
+[McDowell's Burger App](https://stark-sands-63607.herokuapp.com/)
 
 # Requirements:
 - Create a working burger app that allows users to add a burger name then decide if they want to 'devour' the burger. 
