@@ -6,7 +6,7 @@ const connection = require("../config/connection.js");
 const orm = {
   
   all: function(table) {
-    const queryString = "SELECT * FROM " + tableInput + ";";
+    const queryString = "SELECT * FROM ??";
     return connection.query(queryString, [table]);
   },
   

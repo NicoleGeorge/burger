@@ -8,13 +8,14 @@ router.get("/", function(req, res) {
   burger.all()
   .then(burgerData => {
     console.log(burgers);
-    res.render("index", { burger_data: burgerData });
+    res.render("index", { burgers });
   });
 });
 
-router.post("/burgers", function(req, res) {
+router.post("/api/burgers", function(req, res) {
   burger.create([
     "name",
+    "devour"
   ], [
     req.body.name,
   ])
@@ -23,7 +24,13 @@ router.post("/burgers", function(req, res) {
     res.json({ id: result.insertId });
     res.redirect("/");
   });
-});
+});router.put("/api/cats/:id", function(req, res) {
+  
+  const data = { devour: req.body.devour === 'true' };
+  const condition = { id: req.params.id };
+
+  console.log("condition", condition);
+
 
   burger.update(data, condition)
   .then(result => {
