@@ -23,22 +23,47 @@ font-size: 32px !important;
 
 
 li {
-    padding: 5px;
-    margin: 5px;
-    text-decoration: none;
-  }
-  
-  .label {
-    font-weight: bold;
-  }
-  
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-  
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  background: #C62B29;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.order-burger {
+  border: none;
+  font-size: 18px;
+  border-radius: 2rem;
+  margin: 10px;
+  padding: 10px;
+  background-color: white; 
+  color:#C62B29;
+}
+
+.order-burger:hover {
+  border: none;
+  font-size: 18px;
+  border-radius: 2rem;
+  margin: 10px;
+  padding: 10px;
+  background-color: yellow; 
+  color:#C62B29;
+}
+
+.delete-burger, 
+.devour-burger {
+  border: none;
+  background-color: #C62B29;
+  color: yellow;
+}

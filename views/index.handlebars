@@ -15,7 +15,6 @@
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-12 text-center" class="order">
-
       <ul>
         {{#each burgers_data}}
           {{#unless this.devoured}}
@@ -42,15 +41,17 @@
 
 
 {{!-- order form --}}
-<div class="col-md-6 text-center" class="order">
+<div class="container-fluid">
   <div class="row">
-    <h2>What burger would you like?</h2>
+    <div class="col-md-12 text-center" class="order">
+
+    <h2>Please Place your order with Maurice</h2>
     <form class="create-update-form">
       <div class="form-group">
         <label for="burger">Burger Name:</label>
         <input type="text" id="burger" name="name">
       </div>
-        <button type="submit">Order Burger</button>
+        <button class="order-burger" type="submit">Order Burger</button>
     </form>
   </div>
 </div>
