@@ -1,29 +1,47 @@
-<div class="container">
+{{!-- list of burgers --}}
+
+{{!-- heading --}}
+<div class="container-fluid">
 <div class="row">
-  <div class="col-md-12 text-center" id="top-setion">
-    <img src="/assets/css/img/mcdowells-logo.jpg" alt="McDowell's burgers logo" />
-      <h1>Welcom to McDowell's</h1>
+  <div class="col-md-12 text-center" id="top-section">
+    <img class="logo" src="/assets/css/img/mcdowells-logo.jpg" alt="McDowell's burgers logo" />
+      <h1>Welcome to McDowell's</h1>
+      <h3>Please Place your order with Maurice</h3>
   </div>
-  <div class="col-md-6 text-center" class="order">
-    <div class="row">
-      <h2>Please Place your order with Maurice</h2>
-      {{#each burgers_data}}
-      {{#unless this.devoured}}
-        <div class="col-md-9 text-center">
+</div>
+</div>
+
+{{!-- menu items --}}
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12 text-center" class="order">
+
+      <ul>
+        {{#each burgers_data}}
+          {{#unless this.devoured}}
+            {{> burgers/burger-block devoured=false}}
+      </ul>
+      
+        {{!-- <div class="col-md-9 text-center">
           <pre>{{this.id}}. {{this.name}}
           </pre>
-        </div>
-        <div class="col-md-3 text-center">
-          <form class="devour-form button-size">
+        </div> --}}
+
+            <form class="devour-form button-size">
+<div class="form-group">
             <input input type="hidden" class="burger_id" type="text" value="">
             <button type="submit" class="btn btn-defaut"></button>
           </form>
-        </div>
+
         {{/unless}}
       {{/each}}
     </div>
   </div>
 </div>
+
+
+
+{{!-- order form --}}
 <div class="col-md-6 text-center" class="order">
   <div class="row">
     <h2>What burger would you like?</h2>

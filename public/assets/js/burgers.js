@@ -4,7 +4,7 @@ $(function() {
     const id = $(this).data("id");
     const eatBurger= $(this).data("devourBurger");
 
-    var eatBurgerState = {
+    const eatBurgerState = {
       devour: eatBurger
     };
 
