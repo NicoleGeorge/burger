@@ -21,11 +21,14 @@ h2 {
 font-size: 32px !important;
 }
 
+ul {
+  list-style-type: none; 
+}
 
 li {
   padding: 5px;
   margin: 5px;
-  text-decoration: none;
+  list-style-type: none;
 }
 
 .label {

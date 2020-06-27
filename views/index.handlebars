@@ -19,21 +19,18 @@
         {{#each burgers_data}}
           {{#unless this.devour}}
             {{> burgers/burger-block devour=false}}
+          {{/unless}}
+        {{/each}}
       </ul>
-      
-        {{!-- <div class="col-md-9 text-center">
-          <pre>{{this.id}}. {{this.name}}
-          </pre>
-        </div> --}}
+    
 
-            <form class="devour-form button-size">
-<div class="form-group">
-            <input input type="hidden" class="burger_id" type="text" value="">
-            <button type="submit" class="btn btn-defaut"></button>
-          </form>
+      <form class="devour-form button-size">
+        <div class="form-group">
+        <input type="hidden" class="burger_id" type="text" value="">
+        <button type="submit" class="btn btn-defaut"></button>
+      </form>
 
-        {{/unless}}
-      {{/each}}
+
     </div>
   </div>
 </div>
