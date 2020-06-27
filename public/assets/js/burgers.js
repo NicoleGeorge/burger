@@ -22,13 +22,16 @@ $(function() {
   });
 
 
-    $(".create-form").on("submit", function(event) {
+    $(".create-update-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
 
+      let burgerInput = $("#burger").val()
+      console.log({burgerInput});
+
       const newBurger = {
         name: $("#burger").val().trim(),
-        devour: $("[name=devour]:checked").val().trim()
+       
       };
   
       // Send the POST request.
@@ -39,8 +42,7 @@ $(function() {
         function() {
           console.log("created new burger");
           // Reload the page to get the updated list
-          location.reload();
-        }
+          location.reload();        }
       );
     });
   
