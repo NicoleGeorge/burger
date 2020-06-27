@@ -64,9 +64,17 @@ li {
   color:#C62B29;
 }
 
+.red{
+  background-color: #C62B29;
+}
+
+.green{
+  background-color: #5BBA47; 
+}
+
 .delete-burger, 
 .devour-burger {
   border: none;
-  background-color: #C62B29;
+ 
   color: yellow;
 }

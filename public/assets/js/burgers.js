@@ -9,7 +9,7 @@ $(function() {
     };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: eatBurgerState
     }).then(
@@ -46,19 +46,19 @@ $(function() {
       );
     });
   
-    $(".devour-burger").on("click", function(event) {
-      const id = $(this).data("id");
+    // $(".devour-burger").on("click", function(event) {
+    //   const id = $(this).data("id");
   
-      // Send the DELETE request.
-      $.ajax("/api/burgers/" + id, {
-        type: "DELETE"
-      }).then(
-        function() {
-          console.log("sooo goood!!!!", id);
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
-    });
+    //   // Send the DELETE request.
+    //   $.ajax("/api/burgers/" + id, {
+    //     type: "DELETE"
+    //   }).then(
+    //     function() {
+    //       console.log("sooo goood!!!!", id);
+    //       // Reload the page to get the updated list
+    //       location.reload();
+    //     }
+    //   );
+    // });
   });
   

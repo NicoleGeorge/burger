@@ -6,6 +6,7 @@ const burger = require("../models/burger.js");
 router.get("/", function (req, res) {
   burger.all().then((burgers_data) => {
     // console.log(burgers_data);
+    console.log({burgers_data});
     res.render("index", { burgers_data });
   });
 });
@@ -27,12 +28,13 @@ router.put("/api/burgers/:id", function (req, res) {
   console.log("condition", condition);
 
   burger.update(data, condition).then((result) => {
-    if (result.changedRows == 0) {
-      // If no rows were changed, then the ID must not exist, so 404
-      res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
+
+    res.json({ result });
+   
+      
+  
+  }) .catch((err) => {
+    console.log(err);
   });
 });
 
