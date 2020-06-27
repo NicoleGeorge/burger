@@ -1,5 +1,7 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE burgers_db if not exists;
 USE burgers_db;
+
+drop table if exists burgers;
 
 CREATE TABLE burgers
 (
@@ -8,3 +10,4 @@ CREATE TABLE burgers
 	devour BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
+
